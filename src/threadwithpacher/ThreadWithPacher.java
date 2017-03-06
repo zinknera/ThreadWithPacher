@@ -15,7 +15,14 @@ public class ThreadWithPacher {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        ThreadWithPacher obj = new ThreadWithPacher();
+        obj.myFirstMethode();
+    }
+
+    private void myFirstMethode() {
+        Producer prod = new Producer();
+        Thread p1 = new Thread(prod);
+        p1.start();
     }
     
 }
